@@ -25,7 +25,7 @@ class RbeForm extends React.Component {
     };
 
     submitBook(school, year, book, book_author) {
-        Axios.post('https://mysql-88169-0.cloudclusters.net/api/insert', {
+        Axios.post('https://miudos-a-votos.herokuapp.com/api/insert', {
             school: school,
             year: year,
             book_name: book,
@@ -37,7 +37,7 @@ class RbeForm extends React.Component {
     }
 
     getBooksList = () => {
-        Axios.get('https://mysql-88169-0.cloudclusters.net/api/get')
+        Axios.get('https://miudos-a-votos.herokuapp.com/api/get')
             .then((response) => response.data)
             .then((response) => {
                 this.setState({ bookList: response }, () => {

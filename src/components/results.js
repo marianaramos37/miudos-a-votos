@@ -38,7 +38,7 @@ class Res extends React.Component {
     }
 
     getResults = () => {
-        Axios.get('https://mysql-88169-0.cloudclusters.net/api/getresults')
+        Axios.get('https://miudos-a-votos.herokuapp.com/api/getresults')
             .then((response) => response.data)
             .then((response) => {
                 this.setState({ results: response }, () => {
